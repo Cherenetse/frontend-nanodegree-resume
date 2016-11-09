@@ -3,7 +3,7 @@ var bio = {
     "role": "Front-End Engineer",
     "contacts": {
         "email": "cherenetse@gmail.com",
-        "github": "cherenetse",
+        "github": "cherenetse@github.io",
         "linkedin": "https://www.linkedin.com/in/cherenet-alemu-tessema-33ab647a",
         "location": "Germantown , Maryland, U.S.A"
     },
@@ -208,6 +208,7 @@ education.display = function() {
 }
 
 education.display();
+$("#mapDiv").append(googleMap);
 
 
 
