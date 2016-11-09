@@ -19,22 +19,26 @@ var work = {
             "title": "Center Consultant",
             "location": "Germantown , Maryland",
             "datesWorked": "October 2016",
-            "description": "awfaefas asdgfqfaf sadgfageaf asdgasdgagafgaegadfg adfgag" +
-            "asdfadg asdgasdgaset asdgasdgasdgasdg asdgasdgasgagasg" +
-            "awfaefas asdgfqfaf sadgfageaf asdgasdgagafgaegadfg adfgag" +
-            "awfaefas asdgfqfaf sadgfageaf asdgasdgagafgaegadfg adfgag" +
-            "awfaefas asdgfqfaf sadgfageaf asdgasdgagafgaegadfg adfgag"
+            "description": "consistently delivering a positive customer experience to all customers," +
+            " utilizing consultative skills to anticipate customer needs, suggest alternatives and " +
+            "provide solutions. This is a customer service focused job that requires knowledgeable team member " +
+             " in all areas of the Center’s business, including print, signs & graphics, and shipping"
+        },
+        {
+            "employer": "Panera Bread",
+            "title": "Line Associate",
+            "location": "Germantown , Maryland",
+            "datesWorked": "March 2016 - October 2016",
+            "description": " Satisfying customer needs"
         },
         {
             "employer": "Safeway",
             "title": "Cashier",
             "location": "Germantown, Maryland",
             "datesWorked": "March 2016 - Jun 2016",
-            "description": "awfaefas asdgfqfaf sadgfageaf asdgasdgagafgaegadfg adfgag" +
-            "asdfadg asdgasdgaset asdgasdgasdgasdg asdgasdgasgagasg" +
-            "awfaefas asdgfqfaf sadgfageaf asdgasdgagafgaegadfg adfgag" +
-            "awfaefas asdgfqfaf sadgfageaf asdgasdgagafgaegadfg adfgag" +
-            "awfaefas asdgfqfaf sadgfageaf asdgasdgagafgaegadfg adfgag"
+            "description": "Responsible for taking money in the form of cash," +
+            " check, or credit card from patrons in exchange for food or services."+
+            " Scans items, provides change, balances drawer, and processes card transactions."
         }
 
     ]
@@ -73,14 +77,14 @@ var projects = {
             "datesWorked": "September 2016",
             "description": "Created an online portfolio as part of Udacity's Front-End Web Developer " +
             "Nanodegree.",
-            "images": ["images/portfolio.png"],
+            "images": ["images/portfolio.png" ,"images/port1.png"],
             "url": "http://cherenetse.github.io/"
         },
         {
             "title": "Candle Shop website",
             "datesWorked": "March 2016 - May 2016",
             "description": "Created this Website as a progress for my Front-End development goal",
-            "images": ["images/capture2.png"],
+            "images": ["images/capture2.png","images/capture1.png"],
             "url": "http://sccandles.x10host.com/"
         }
     ]
@@ -90,6 +94,7 @@ var projects = {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
+
 
 
 var formattedContactInfo = [];

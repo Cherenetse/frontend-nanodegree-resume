@@ -129,7 +129,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #525c65;
 }
 
 .flex-box {
@@ -157,11 +157,35 @@ ul {
 }
 
 .biopic {
+
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
   float: left;
   padding: 10px;
   width: 200px;
   display: none;
+
+}
+  .biopic:hover {
   border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+
+}
+
+  img:hover{
+        box-shadow:
+                1px 1px #525c65,
+                2px 2px #525c65,
+                3px 3px #525c65;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
 }
 
 img {
