@@ -13,54 +13,50 @@ var bio = {
 };
 
 var work = {
-    "jobs": [
-        {
+    "jobs": [{
             "employer": "FedEx",
             "title": "Center Consultant",
             "location": "Germantown , Maryland",
             "datesWorked": "October 2016",
             "description": "consistently delivering a positive customer experience to all customers," +
-            " utilizing consultative skills to anticipate customer needs, suggest alternatives and " +
-            "provide solutions. This is a customer service focused job that requires knowledgeable team member " +
-             " in all areas of the Center’s business, including print, signs & graphics, and shipping"
-        },
-        {
+                " utilizing consultative skills to anticipate customer needs, suggest alternatives and " +
+                "provide solutions. This is a customer service focused job that requires knowledgeable team member " +
+                " in all areas of the Center’s business, including print, signs & graphics, and shipping"
+        }, {
             "employer": "Panera Bread",
             "title": "Line Associate",
             "location": "Germantown , Maryland",
             "datesWorked": "March 2016 - October 2016",
             "description": " Satisfying customer needs"
-        },
-        {
+        }, {
             "employer": "Safeway",
             "title": "Cashier",
             "location": "Germantown, Maryland",
             "datesWorked": "March 2016 - Jun 2016",
             "description": "Responsible for taking money in the form of cash," +
-            " check, or credit card from patrons in exchange for food or services."+
-            " Scans items, provides change, balances drawer, and processes card transactions."
+                " check, or credit card from patrons in exchange for food or services." +
+                " Scans items, provides change, balances drawer, and processes card transactions."
         }
 
     ]
 };
 
 var education = {
-    "schools": [
-        { "name": "Alpha University",
-            "datesAttended": "2009 - 2013",
-            "location": "Addis Ababa, Ethiopia",
-            "degree": "Bachelors Degree",
-            "major": "Marketing Managment",
-            "url": "www.alphauniversitycollege.edu.et"
-        }
-    ],
-    "onlineCourses": [
-        { "school": "Udacity",
+    "schools": [{
+        "name": "Alpha University",
+        "datesAttended": "2009 - 2013",
+        "location": "Addis Ababa, Ethiopia",
+        "degree": "Bachelors Degree",
+        "major": "Marketing Managment",
+        "url": "www.alphauniversitycollege.edu.et"
+    }],
+    "onlineCourses": [{
+            "school": "Udacity",
             "title": "Html and CSS",
             "completed": "September 2016",
             "url": "https://www.udacity.com/nanodegree/nd015"
-        },
-        { "school": "Linkedin Learning",
+        }, {
+            "school": "Linkedin Learning",
             "title": "Javascript",
             "completed": "November 2016",
             "url": "https://www.linkedin.com/learning"
@@ -76,15 +72,14 @@ var projects = {
             "title": "Online Portfolio",
             "datesWorked": "September 2016",
             "description": "Created an online portfolio as part of Udacity's Front-End Web Developer " +
-            "Nanodegree.",
-            "images": ["images/portfolio.png" ,"images/port1.png"],
+                "Nanodegree.",
+            "images": ["images/portfolio.png", "images/port1.png"],
             "url": "http://cherenetse.github.io/"
-        },
-        {
+        }, {
             "title": "Candle Shop website",
             "datesWorked": "March 2016 - May 2016",
             "description": "Created this Website as a progress for my Front-End development goal",
-            "images": ["images/capture2.png","images/capture1.png"],
+            "images": ["images/capture2.png", "images/capture1.png"],
             "url": "http://sccandles.x10host.com/"
         }
     ]
@@ -108,15 +103,15 @@ $("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
 
 
-if(bio.skills.length > 0) {
+if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
 
-    for(i in bio.skills) {
+    for (i = 0; i < bio.skills.length; i++) {
         $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
     }
 }
 
-for(i in formattedContactInfo) {
+for (i = 0; i < formattedContactInfo.length; i++) {
     $("#topContacts").append(formattedContactInfo[i]);
     $("#footerContacts").append(formattedContactInfo[i]);
 }
@@ -124,11 +119,11 @@ for(i in formattedContactInfo) {
 
 function displayWork() {
 
-    if(work.jobs.length > 0) {
+    if (work.jobs.length > 0) {
 
         $("#workExperience").append(HTMLworkStart);
 
-        for(i in work.jobs) {
+        for (i = 0; i < work.jobs.length; i++) {
             var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
             var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
             var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
@@ -151,8 +146,8 @@ displayWork();
 
 
 projects.display = function() {
-    if(projects.projects.length > 0) {
-        for(i in projects.projects) {
+    if (projects.projects.length > 0) {
+        for (i = 0; i < projects.projects.length; i++) {
             $("#projects").append(HTMLprojectStart);
 
             var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title).replace("#", projects.projects[i].url);
@@ -163,7 +158,7 @@ projects.display = function() {
             $(".project-entry:last").append(formattedProjectDates);
             $(".project-entry:last").append(formattedProjectDescription);
 
-            for(img in projects.projects[i].images) {
+            for (var img = 0; img < projects.projects[i].images.length; img++) {
                 var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[img]);
                 $(".project-entry:last").append(formattedProjectImage);
             }
@@ -171,13 +166,13 @@ projects.display = function() {
 
         }
     }
-}
+};
 
 projects.display();
 
 education.display = function() {
-    if(education.schools.length > 0 || education.onlineCourses.length > 0) {
-        for(i in education.schools) {
+    if (education.schools.length > 0 || education.onlineCourses.length > 0) {
+        for (i = 0; i < education.schools.length; i++) {
             $("#education").append(HTMLschoolStart);
 
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools[i].url);
@@ -194,9 +189,9 @@ education.display = function() {
 
         }
 
-        if(education.onlineCourses.length > 0) {
+        if (education.onlineCourses.length > 0) {
             $("#education").append(HTMLonlineClasses);
-            for(i in education.onlineCourses) {
+            for (i = 0; i < education.onlineCourses.length; i++) {
                 $("#education").append(HTMLschoolStart);
                 var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#", education.onlineCourses[i].url);
                 var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
@@ -210,11 +205,7 @@ education.display = function() {
         }
 
     }
-}
+};
 
 education.display();
 $("#mapDiv").append(googleMap);
-
-
-
-
