@@ -88,13 +88,6 @@ var projects = {
 
 
 
-var formattedContactInfo = [];
-formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
-formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
-formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
-formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
-
-
 
 bio.display = function() {
 
@@ -116,6 +109,11 @@ bio.display = function() {
             $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
         }
     }
+    var formattedContactInfo = [];
+    formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
+    formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
+    formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
+    formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
     for (i = 0; i < formattedContactInfo.length; i++) {
         $("#topContacts").append(formattedContactInfo[i]);
