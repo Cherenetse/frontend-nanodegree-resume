@@ -8,8 +8,8 @@ var bio = {
         "linkedin": "https://www.linkedin.com/in/cherenet-alemu-tessema-33ab647a",
         "location": "Germantown , Maryland, U.S.A"
     },
-    "biopic": "images/bio2.jpg",
-    "welcomeMsg": "I'm currently working as center consultant at FedEx office.Thanks for stopping by!",
+    "biopic": "images/bio.jpg",
+    "welcomeMessage": "I'm currently working as center consultant at FedEx office.Thanks for stopping by!",
     "skills": ["Html", "CSS", "Javascript", "Responsive Webdevelopment"]
 };
 
@@ -87,12 +87,6 @@ var projects = {
 };
 
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-
-
 
 var formattedContactInfo = [];
 formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
@@ -101,12 +95,19 @@ formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
 formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWelcomeMsg);
 
 bio.display = function() {
+
+    var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+    var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+    $("#header").prepend(formattedRole);
+    $("#header").prepend(formattedName);
+    $("#header").append(formattedBioPic);
+    $("#header").append(formattedWelcomeMessage);
+
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
